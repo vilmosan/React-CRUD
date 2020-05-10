@@ -1,15 +1,28 @@
 import React, { Component } from 'react';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 
 class Post extends Component {
   render() {
   return (
     <div>
-      <h2>{this.props.post.title}</h2>
-      <p>{this.props.post.message}</p>
-      
-      <button onClick={()=>this.props.dispatch({type:'EDIT_POST',id:this.props.post.id})}>Edit</button>
-      <button onClick={()=>this.props.dispatch({type:'DELETE_POST',id:this.props.post.id})}>Delete</button>
+        <li className="list-item">
+            <p>{this.props.post.title}</p>
+            <div>
+                <button 
+                    className="btn-delete task-btn" 
+                    onClick={()=>this.props.dispatch({type:'EDIT_POST',id:this.props.post.id})}
+                >
+                        <i className="fas fa-pen" id="editIcon"></i>
+                </button>{' '}
+                <button 
+                    className="btn-edit task-btn" 
+                    onClick={()=>this.props.dispatch({type:'DELETE_POST',id:this.props.post.id})}
+                >
+                        <i className="fas fa-trash-alt" id="deleteIcon"></i>
+                </button>
+            </div>
+            
+        </li>
     </div>
   );
  }
