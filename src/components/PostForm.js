@@ -9,7 +9,8 @@ class PostForm extends Component {
         const data = {
           id: new Date(),
           title,
-          message
+          message,
+          editing: false
         }
         //console.log(data);
         // dispatch method accepts an object as it’s argument and this object is what we call as ‘action’.
