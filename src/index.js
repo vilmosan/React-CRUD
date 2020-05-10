@@ -4,9 +4,9 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 
 import App from './components/App'
-import postReducer from './reducers/postReducer';
+import birthdayReducer from './reducers/birthdayReducer';
 
-const store = createStore(postReducer);
+const store = createStore(birthdayReducer);
 
 render(
     <Provider store={store}>

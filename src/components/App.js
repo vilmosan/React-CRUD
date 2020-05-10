@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import PostForm from './PostForm';
-import AllPost from './AllPost';
+import BirthdayForm from './BirthdayForm';
+import BirthdayList from './BirthdayList';
 import Header from './Header';
 import '../App.css';
 
@@ -13,8 +13,8 @@ class App extends Component {
           <div className="app-wrapper">
             <Header />
             <div className="main">
-                <PostForm />
-                <AllPost />
+                <BirthdayForm />
+                <BirthdayList />
             </div>
           </div>
       </div>
